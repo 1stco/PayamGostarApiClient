@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayamGostarClient", "PayamGostarClient\PayamGostarClient.csproj", "{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A690DE21-A4E6-4A1E-8231-FD71AFA4D5EC}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CA4E05B0-9447-4EC2-8A6B-C1608965952D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\BuildNugetPackages.bat = .nuget\BuildNugetPackages.bat
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+		.nuget\PublishNugetPackages.bat = .nuget\PublishNugetPackages.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35058BB0-6934-4E66-9382-5EAE07FF61E5}
+	EndGlobalSection
+EndGlobal
