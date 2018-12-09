@@ -7,8 +7,8 @@
     <ProjectGuid>{3D3E812C-71BF-45AF-B2DB-A372DC9A614C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PayamGostarClient</RootNamespace>
-    <AssemblyName>Septa.PayamGostarClient</AssemblyName>
+    <RootNamespace>Septa.PayamGostarApiClient</RootNamespace>
+    <AssemblyName>Septa.PayamGostarApiClient</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
