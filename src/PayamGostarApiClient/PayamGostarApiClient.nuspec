@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Septa.PayamGostarClient</id>
+    <id>Septa.PayamGostarApiClient</id>
     <version>0.0.2</version>
     <title>PayamGostar Client</title>
-    <authors>1st.ir Jalalx</authors>
-    <owners>1st.ir</owners>
+    <authors>1st.ir,jalalx</authors>
+    <owners>1st.ir,jalalx</owners>
     <projectUrl>https://www.PayamGostar.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>PayamGostar Client</description>
