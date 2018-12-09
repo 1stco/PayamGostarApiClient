@@ -7,7 +7,6 @@
     <authors>1st.ir,jalalx</authors>
     <owners>1st.ir,jalalx</owners>
     <projectUrl>https://www.PayamGostar.com/</projectUrl>
-	  <repository>https://github.com/1stco/PayamGostarApiClient</repository>
 	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>PayamGostar Client</description>
     <releaseNotes>PayamGostar Client</releaseNotes>
