@@ -5,8 +5,6 @@ using System.Text;
 
 namespace PayamGostarClient.TelephonySystem
 {
-
-
     public class CallCreateModel 
     {
         public string TsKey { get; set; }

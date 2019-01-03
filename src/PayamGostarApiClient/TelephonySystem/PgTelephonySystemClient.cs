@@ -16,22 +16,22 @@ namespace PayamGostarClient.TelephonySystem
 
         public CallChannelCreateResult CallChannelCreate(CallChannelCreateModel model)
         {
-            return _httpClient.PostJson<CallChannelCreateModel, CallChannelCreateResult>(_pgClient.ServiceUrl, "/api/v1/telephony/callChannelCreate", _pgClient.Ticket, model);
+            return _httpClient.PostJson<CallChannelCreateModel, CallChannelCreateResult>(_pgClient.ServiceUrl, "/api/v1/telephony/channel", _pgClient.Ticket, model);
         }
 
         public CallCreateResult CallCreate(CallCreateModel model)
         {
-            return _httpClient.PostJson<CallCreateModel, CallCreateResult>(_pgClient.ServiceUrl, "/api/v1/telephony/callCreate", _pgClient.Ticket, model);
+            return _httpClient.PostJson<CallCreateModel, CallCreateResult>(_pgClient.ServiceUrl, "/api/v1/telephony/call", _pgClient.Ticket, model);
         }
 
         public void CallChannelUpdate(CallChannelUpdateModel model)
         {
-            _httpClient.PostJson(_pgClient.ServiceUrl, "/api/v1/telephony/callChannelUpdate", _pgClient.Ticket, model);
+            _httpClient.PutJson(_pgClient.ServiceUrl, "/api/v1/telephony/channel", _pgClient.Ticket, model);
         }
 
         public void CallUpdate(CallUpdateModel model)
         {
-            _httpClient.PostJson(_pgClient.ServiceUrl, "/api/v1/telephony/callUpdate", _pgClient.Ticket, model);
+            _httpClient.PutJson(_pgClient.ServiceUrl, "/api/v1/telephony/call", _pgClient.Ticket, model);
         }
 
         public void UpdateIdentity(UpdateCallIdentityModel model)
@@ -41,7 +41,29 @@ namespace PayamGostarClient.TelephonySystem
 
         public IEnumerable<ActiveCallResult> GetActiveCalls(ActiveCallFilterModel model)
         {
-            return _httpClient.PostJson<ActiveCallFilterModel, List<ActiveCallResult>>(_pgClient.ServiceUrl, "/api/v1/telephony/getActiveCalls", _pgClient.Ticket, model);
+            return _httpClient.GetJson<ActiveCallFilterModel, List<ActiveCallResult>>(_pgClient.ServiceUrl, "/api/v1/telephony/call/active", _pgClient.Ticket, model);
         }
+
+        public IEnumerable<TelephonySystem> GetAll()
+        {
+            return _httpClient.GetJson<TelephonySystemRequest, List<TelephonySystem>>(_pgClient.ServiceUrl, "/api/v1/telephony", _pgClient.Ticket, null);
+        }
+    }
+
+    public class TelephonySystemRequest
+    {
+    }
+
+    public class TelephonySystem
+    {
+        public Guid Id { get; set; }
+
+        public string Name { get; set; }
+
+        public Guid? OfficeId { get; set; }
+
+        public string Key { get; set; }
+
+        public string BrevityName { get; set; }
     }
 }

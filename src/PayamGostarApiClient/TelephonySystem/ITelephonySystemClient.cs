@@ -1,4 +1,6 @@
-﻿namespace PayamGostarClient.TelephonySystem
+﻿using System.Collections.Generic;
+
+namespace PayamGostarClient.TelephonySystem
 {
     public interface ITelephonySystemClient
     {
@@ -11,5 +13,9 @@
         void CallUpdate(CallUpdateModel model);
 
         void UpdateIdentity(UpdateCallIdentityModel model);
+
+        IEnumerable<TelephonySystem> GetAll();
+
+        IEnumerable<ActiveCallResult> GetActiveCalls(ActiveCallFilterModel model);
     }
 }
