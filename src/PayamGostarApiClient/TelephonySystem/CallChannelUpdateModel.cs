@@ -5,7 +5,7 @@ namespace PayamGostarClient.TelephonySystem
 
     public class CallChannelUpdateModel
     {
-        public string SourceChannelId { get; set; }
+        public long CallChannelId { get; set; }
 
         public ChannelStatus ChannelStatusIndex { get; set; }
 
