@@ -1,5 +1,6 @@
 ﻿using PayamGostarClient.Internals;
 using System.Collections.Generic;
+using System.Net;
 
 namespace PayamGostarClient
 {
@@ -20,7 +21,7 @@ namespace PayamGostarClient
             where TRequest : class
             where TResponse : class;
 
-        void PostJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
+        HttpStatusCode PostJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
             where TRequest : class;
 
 
@@ -28,7 +29,7 @@ namespace PayamGostarClient
             where TRequest : class
             where TResponse : class;
 
-        void PutJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
+        HttpStatusCode PutJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
             where TRequest : class;
 
 

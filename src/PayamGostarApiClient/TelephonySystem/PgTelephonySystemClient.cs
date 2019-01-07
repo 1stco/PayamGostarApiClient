@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Septa.PayamGostarApiClient.TelephonySystem;
 
 namespace PayamGostarClient.TelephonySystem
 {
@@ -47,6 +48,11 @@ namespace PayamGostarClient.TelephonySystem
         public IEnumerable<TelephonySystem> GetAll()
         {
             return _httpClient.GetJson<TelephonySystemRequest, List<TelephonySystem>>(_pgClient.ServiceUrl, "/api/v1/telephony", _pgClient.Ticket, null);
+        }
+
+        public bool MergeCall(CallMergeModel model)
+        {
+            return _httpClient.PutJson(_pgClient.ServiceUrl, "api/v1/telephony/call/merge", _pgClient.Ticket, model) == System.Net.HttpStatusCode.OK;
         }
     }
 

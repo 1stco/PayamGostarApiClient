@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Septa.PayamGostarApiClient.TelephonySystem;
+using System.Collections.Generic;
 
 namespace PayamGostarClient.TelephonySystem
 {
@@ -13,6 +14,8 @@ namespace PayamGostarClient.TelephonySystem
         void CallUpdate(CallUpdateModel model);
 
         void UpdateIdentity(UpdateCallIdentityModel model);
+
+        bool MergeCall(CallMergeModel model);
 
         IEnumerable<TelephonySystem> GetAll();
 

@@ -67,6 +67,7 @@
     <Compile Include="TelephonySystem\CallCreateModel.cs" />
     <Compile Include="TelephonySystem\CallCreateResult.cs" />
     <Compile Include="TelephonySystem\CallDirection.cs" />
+    <Compile Include="TelephonySystem\CallMergeModel.cs" />
     <Compile Include="TelephonySystem\CallUpdateModel.cs" />
     <Compile Include="TelephonySystem\ChannelResponse.cs" />
     <Compile Include="TelephonySystem\ChannelStatus.cs" />

@@ -64,9 +64,9 @@ namespace PayamGostarClient.Internals
             return JsonConvert.DeserializeObject<TResponse>(response.Content);
         }
 
-        public void PostJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model) where TRequest : class
+        public HttpStatusCode PostJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model) where TRequest : class
         {
-            InternalSendJson(Method.POST, serviceUrl, path, ticket, model);
+            return InternalSendJson(Method.POST, serviceUrl, path, ticket, model).StatusCode;
         }
 
         private static IRestResponse InternalSendJson<TRequest>(Method method, string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model) where TRequest : class
@@ -130,9 +130,9 @@ namespace PayamGostarClient.Internals
             return JsonConvert.DeserializeObject<TResponse>(response.Content);
         }
 
-        public void PutJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model) where TRequest : class
+        public HttpStatusCode PutJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model) where TRequest : class
         {
-            InternalSendJson(Method.PUT, serviceUrl, path, ticket, model);
+            return InternalSendJson(Method.PUT, serviceUrl, path, ticket, model).StatusCode;
         }
 
         public TResponse GetJson<TRequest, TResponse>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
