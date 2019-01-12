@@ -49,6 +49,7 @@
     <Compile Include="IHttpClient.cs" />
     <Compile Include="Internals\DefaultQueryStringSerializer.cs" />
     <Compile Include="Internals\IQueryStringSerializer.cs" />
+    <Compile Include="Internals\NewtonsoftJsonSerializer.cs" />
     <Compile Include="InvalidCredentialsException.cs" />
     <Compile Include="IPgClient.cs" />
     <Compile Include="IPgClientFactory.cs" />

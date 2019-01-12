@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Extensions.MonoHttp;
+using RestSharp.Serializers.Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,8 @@ namespace PayamGostarClient.Internals
         {
             var client = new RestClient(serviceUrl);
             var request = new RestRequest(path);
+            request.JsonSerializer = NewtonsoftJsonSerializer.Default;
+
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
 
 
@@ -74,6 +77,7 @@ namespace PayamGostarClient.Internals
             var client = new RestClient(serviceUrl);
             var request = new RestRequest(path, method);
             request.AddHeader("Content-Type", "application/json");
+            request.JsonSerializer = NewtonsoftJsonSerializer.Default;
 
             if (ticket != null)
             {
@@ -147,7 +151,15 @@ namespace PayamGostarClient.Internals
                 throw new InvalidOperationException($"Server responded with status {response.StatusCode}");
             }
 
-            return JsonConvert.DeserializeObject<TResponse>(response.Content);
+            return JsonConvert.DeserializeObject<TResponse>(response.Content, DefaultJsonSerializerSettings);
+        }
+
+        private static JsonSerializerSettings DefaultJsonSerializerSettings
+        {
+            get
+            {
+                return new JsonSerializerSettings { DateTimeZoneHandling = DateTimeZoneHandling.Local, ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
+            }
         }
     }
 }
