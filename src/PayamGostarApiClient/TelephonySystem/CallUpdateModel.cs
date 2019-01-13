@@ -11,6 +11,8 @@ namespace PayamGostarClient.TelephonySystem
 
         public string PhoneNumber { get; set; }
 
+        public Guid? IdentityId { get; set; }
+
         public PhoneCallType CallTypeIndex { get; set; }
 
         public bool IsLive { get; set; }
