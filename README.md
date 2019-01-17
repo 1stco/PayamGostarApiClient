@@ -5,16 +5,18 @@
 ### How to authenticate:
 
 ```
-
-    var factory = new PgClientFactory();
-    var signInResult = factory.SignIn(BaseUrl, new PgCredentials("username", "password"));
-    if (signInResult.Ok())
+    private static IPgClient CreateClient()
     {
-        return factory.Create(BaseUrl, signInResult.Ticket);
-    }
-    else
-    {
-        throw new InvalidOperationException($"Can not sign in to {BaseUrl}. Status: {signInResult.Status}");
+        var factory = new PgClientFactory();
+        var signInResult = factory.SignIn(BaseUrl, new PgCredentials("admin", "admin"));
+        if (signInResult.Ok())
+        {
+            return factory.Create(BaseUrl, signInResult.Ticket);
+        }
+        else
+        {
+            throw new InvalidOperationException($"Can not sign in to {BaseUrl}. Status: {signInResult.Status}");
+        }
     }
 
 ```
