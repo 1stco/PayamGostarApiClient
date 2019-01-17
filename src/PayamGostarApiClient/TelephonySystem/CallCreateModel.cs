@@ -15,11 +15,11 @@ namespace PayamGostarClient.TelephonySystem
 
         public DateTime StartDate { get; set; }
 
-        public int CallTypeIndex { get; set; }
+        public PhoneCallType CallTypeIndex { get; set; }
 
         public string InitChannelPeerName { get; set; }
 
-        public int InitChannelPeerTypeIndex { get; set; }
+        public TelephonySystemPeerType InitChannelPeerTypeIndex { get; set; }
 
         public string InitChannelSourceId { get; set; }
 
