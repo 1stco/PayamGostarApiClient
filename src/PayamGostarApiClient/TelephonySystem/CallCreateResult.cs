@@ -10,7 +10,7 @@ namespace PayamGostarClient.TelephonySystem
     {
         public long CallId { get; set; }
 
-        public string InitChannelId { get; set; }
+        public long InitChannelId { get; set; }
 
         public Guid? IdentityId { get; set; }
 
