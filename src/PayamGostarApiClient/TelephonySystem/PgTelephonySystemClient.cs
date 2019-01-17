@@ -30,9 +30,9 @@ namespace PayamGostarClient.TelephonySystem
             _httpClient.PutJson(_pgClient.ServiceUrl, "/api/v1/telephony/channel", _pgClient.Ticket, model);
         }
 
-        public void CallUpdate(CallUpdateModel model)
+        public CallUpdateResult CallUpdate(CallUpdateModel model)
         {
-            _httpClient.PutJson(_pgClient.ServiceUrl, "/api/v1/telephony/call", _pgClient.Ticket, model);
+            return _httpClient.PutJson<CallUpdateModel, CallUpdateResult>(_pgClient.ServiceUrl, "/api/v1/telephony/call", _pgClient.Ticket, model);
         }
 
         public void UpdateIdentity(UpdateCallIdentityModel model)

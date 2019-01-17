@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>Septa.PayamGostarApiClient</id>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <title>PayamGostar Client</title>
     <authors>1st.ir,jalalx</authors>
     <owners>1st.ir,jalalx</owners>
     <projectUrl>https://www.PayamGostar.com/</projectUrl>
 	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>PayamGostar Client</description>
+    <description>PayamGostar Client. Repository: https://github.com/1stco/PayamGostarApiClient/</description>
     <releaseNotes>PayamGostar Client</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Septa PayamGostar</tags>

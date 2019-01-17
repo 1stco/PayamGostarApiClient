@@ -11,7 +11,7 @@ namespace PayamGostarClient.TelephonySystem
 
         void CallChannelUpdate(CallChannelUpdateModel model);
 
-        void CallUpdate(CallUpdateModel model);
+        CallUpdateResult CallUpdate(CallUpdateModel model);
 
         void UpdateIdentity(UpdateCallIdentityModel model);
 

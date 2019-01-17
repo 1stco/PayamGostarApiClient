@@ -70,6 +70,7 @@
     <Compile Include="TelephonySystem\CallDirection.cs" />
     <Compile Include="TelephonySystem\CallMergeModel.cs" />
     <Compile Include="TelephonySystem\CallUpdateModel.cs" />
+    <Compile Include="TelephonySystem\CallUpdateResult.cs" />
     <Compile Include="TelephonySystem\ChannelResponse.cs" />
     <Compile Include="TelephonySystem\ChannelStatus.cs" />
     <Compile Include="TelephonySystem\IdentityType.cs" />
