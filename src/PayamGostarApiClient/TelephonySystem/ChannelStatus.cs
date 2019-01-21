@@ -8,5 +8,6 @@ namespace PayamGostarClient.TelephonySystem
         Down = 1,
         Ringing = 2,
         Up = 3,
+        HangUp = 4
     }
 }
