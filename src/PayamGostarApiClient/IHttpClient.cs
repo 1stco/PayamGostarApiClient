@@ -32,6 +32,8 @@ namespace PayamGostarClient
         HttpStatusCode PutJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
             where TRequest : class;
 
+        void Delete(string serviceUrl, string path, PgAuthenticationTicket ticket);
+
 
         bool Test(string serviceUrl, string path, PgAuthenticationTicket ticket);
     }

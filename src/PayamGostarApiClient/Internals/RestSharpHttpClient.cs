@@ -30,7 +30,6 @@ namespace PayamGostarClient.Internals
             }
         }
 
-
         public HttpResponse PostForm(string serviceUrl, string path, IDictionary<string, string> parameters)
         {
             var client = new RestClient(serviceUrl);
@@ -61,7 +60,7 @@ namespace PayamGostarClient.Internals
             where TResponse : class
         {
             var response = InternalSendJson(Method.POST, serviceUrl, path, ticket, model);
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (!response.StatusCode.IsOk())
                 throw new InvalidOperationException($"Server responded with status {response.StatusCode}");
 
             return JsonConvert.DeserializeObject<TResponse>(response.Content);
@@ -120,7 +119,7 @@ namespace PayamGostarClient.Internals
 
             var response = client.Execute(request);
 
-            return response.StatusCode == HttpStatusCode.OK;
+            return response.StatusCode.IsOk();
         }
 
         public TResponse PutJson<TRequest, TResponse>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
@@ -128,7 +127,7 @@ namespace PayamGostarClient.Internals
             where TResponse : class
         {
             var response = InternalSendJson(Method.PUT, serviceUrl, path, ticket, model);
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (!response.StatusCode.IsOk())
                 throw new InvalidOperationException($"Server responded with status {response.StatusCode}: '{response.StatusDescription}'");
 
             return JsonConvert.DeserializeObject<TResponse>(response.Content);
@@ -146,12 +145,38 @@ namespace PayamGostarClient.Internals
             var pathWithQueryString = model != null ? $"{path}?{QueryStringSerializer.Serialize(model)}" : path;
 
             var response = InternalSendJson(Method.GET, serviceUrl, pathWithQueryString, ticket, default(TRequest));
-            if (response.StatusCode != HttpStatusCode.OK)
+            if(response.StatusCode == HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+
+            if (!response.StatusCode.IsOk())
             {
                 throw new InvalidOperationException($"Server responded with status {response.StatusCode}");
             }
 
             return JsonConvert.DeserializeObject<TResponse>(response.Content, DefaultJsonSerializerSettings);
+        }
+
+        public void Delete(string serviceUrl, string path, PgAuthenticationTicket ticket)
+        {
+            var client = new RestClient(serviceUrl);
+            var request = new RestRequest(path, Method.DELETE);
+            request.AddHeader("Content-Type", "application/json");
+            request.JsonSerializer = NewtonsoftJsonSerializer.Default;
+
+            if (ticket != null)
+            {
+                request.AddHeader("Authorization", $"Bearer {ticket.AccessToken}");
+            }
+
+            var response = client.Execute(request);
+
+            if (!response.StatusCode.IsOk())
+            {
+                throw new InvalidOperationException($"Server responded with status {response.StatusCode}");
+            }
+
         }
 
         private static JsonSerializerSettings DefaultJsonSerializerSettings
@@ -160,6 +185,14 @@ namespace PayamGostarClient.Internals
             {
                 return new JsonSerializerSettings { DateTimeZoneHandling = DateTimeZoneHandling.Local, ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
             }
+        }
+    }
+
+    public static class HttpStatusCodeExtensions
+    {
+        public static bool IsOk(this HttpStatusCode statusCode)
+        {
+            return (int)statusCode >= 200 && (int)statusCode < 300;
         }
     }
 }

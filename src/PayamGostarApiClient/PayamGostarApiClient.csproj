@@ -60,6 +60,7 @@
     <Compile Include="PgCredentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internals\RestSharpHttpClient.cs" />
+    <Compile Include="SecurityItem\ISecurityItemClient.cs" />
     <Compile Include="TelephonySystem\ActiveCallFilterModel.cs" />
     <Compile Include="TelephonySystem\ActiveCallResult.cs" />
     <Compile Include="TelephonySystem\CallChannelCreateModel.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="TelephonySystem\ITelephonySystemClient.cs" />
     <Compile Include="TelephonySystem\PgTelephonySystemClient.cs" />
     <Compile Include="TelephonySystem\PhoneCallType.cs" />
+    <Compile Include="TelephonySystem\TelephonySystemPeerModel.cs" />
+    <Compile Include="TelephonySystem\TelephonySystemPeerResult.cs" />
     <Compile Include="TelephonySystem\TelephonySystemPeerType.cs" />
     <Compile Include="TelephonySystem\UpdateCallIdentityModel.cs" />
   </ItemGroup>

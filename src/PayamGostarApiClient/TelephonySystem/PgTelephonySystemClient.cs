@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PayamGostarClient.Internals;
 using Septa.PayamGostarApiClient.TelephonySystem;
 
 namespace PayamGostarClient.TelephonySystem
@@ -45,22 +46,67 @@ namespace PayamGostarClient.TelephonySystem
             return _httpClient.GetJson<ActiveCallFilterModel, List<ActiveCallResult>>(_pgClient.ServiceUrl, "/api/v1/telephony/call/active", _pgClient.Ticket, model);
         }
 
-        public IEnumerable<TelephonySystem> GetAll()
+        public IEnumerable<TelephonySystemModel> GetAll()
         {
-            return _httpClient.GetJson<TelephonySystemRequest, List<TelephonySystem>>(_pgClient.ServiceUrl, "/api/v1/telephony", _pgClient.Ticket, null);
+            return _httpClient.GetJson<TelephonySystemRequest, List<TelephonySystemModel>>(_pgClient.ServiceUrl, "/api/v1/telephony", _pgClient.Ticket, null);
         }
 
         public bool MergeCall(CallMergeModel model)
         {
-            return _httpClient.PutJson(_pgClient.ServiceUrl, "api/v1/telephony/call/merge", _pgClient.Ticket, model) == System.Net.HttpStatusCode.OK;
+            var status = _httpClient.PutJson(_pgClient.ServiceUrl, "api/v1/telephony/call/merge", _pgClient.Ticket, model);
+            return status.IsOk();
+        }
+
+        public TelephonySystemPeerResult CreatePeer(string tsKey, TelephonySystemPeerModel peer)
+        {
+            return _httpClient.PostJson<TelephonySystemPeerModel, TelephonySystemPeerResult>(_pgClient.ServiceUrl, $"api/v1/telephony/{tsKey}/peer", _pgClient.Ticket, peer);
+        }
+
+        public TelephonySystemPeerResult UpdatePeer(string tsKey, Guid id, TelephonySystemPeerModel peer)
+        {
+            return _httpClient.PutJson<TelephonySystemPeerModel, TelephonySystemPeerResult>(_pgClient.ServiceUrl, $"api/v1/telephony/{tsKey}/peer/{id}", _pgClient.Ticket, peer);
+        }
+
+        public void DeletePeer(string tsKey, Guid id)
+        {
+            _httpClient.Delete(_pgClient.ServiceUrl, $"api/v1/telephony/{tsKey}/{id}", _pgClient.Ticket);
+        }
+
+        public TelephonySystemResult CreateTelephonySystem(TelephonySystemModel telephonySystem)
+        {
+            return _httpClient.PostJson<TelephonySystemModel, TelephonySystemResult>(_pgClient.ServiceUrl, "api/v1/telephony", _pgClient.Ticket, telephonySystem);
+        }
+
+        public TelephonySystemPeerResult GetPeer(string tsKey, string name)
+        {
+            return _httpClient.GetJson<TelephonySystemPeerRequest, TelephonySystemPeerResult>(_pgClient.ServiceUrl, $"api/v1/telephony/{tsKey}/peer/{name}", _pgClient.Ticket, null);
         }
     }
+
+    public class TelephonySystemPeerRequest { }
 
     public class TelephonySystemRequest
     {
     }
 
-    public class TelephonySystem
+    public class TelephonySystemModel
+    {
+        public Guid? Id { get; set; }
+
+        public string ServiceAddress { get; set; }
+
+        public string Name { get; set; }
+
+        public Guid? OfficeId { get; set; }
+
+        public string Key { get; set; }
+
+        public string BrevityName { get; set; }
+
+        public bool UpdatePeersIfNotExists { get; set; }
+    }
+
+    public class TelephonySystemResult
     {
         public Guid Id { get; set; }
 
@@ -71,5 +117,9 @@ namespace PayamGostarClient.TelephonySystem
         public string Key { get; set; }
 
         public string BrevityName { get; set; }
+
+        public bool UpdatePeersIfNotExists { get; set; }
+
+        public string ServiceAddress { get; set; }
     }
 }

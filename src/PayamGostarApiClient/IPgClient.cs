@@ -1,4 +1,5 @@
 ﻿using PayamGostarClient.TelephonySystem;
+using Septa.PayamGostarApiClient.SecurityItem;
 
 namespace PayamGostarClient
 {
@@ -9,5 +10,7 @@ namespace PayamGostarClient
         PgAuthenticationTicket Ticket { get; }
 
         ITelephonySystemClient GetTelephonySystem();
+
+        ISecurityItemClient GetSecurityItem();
     }
 }
