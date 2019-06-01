@@ -17,6 +17,10 @@ namespace PayamGostarClient.TelephonySystem
 
         public DateTime? HangupDate { get; set; }
 
+        public string ToChangePeerName { get; set; }
+        
+        public TelephonySystemPeerType? ToChangePeerTypeIndex { get; set; }
+
         public bool IsLive { get; set; }
     }
 }
