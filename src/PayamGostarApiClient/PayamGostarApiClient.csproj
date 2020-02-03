@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Septa.PayamGostarApiClient</RootNamespace>
     <AssemblyName>Septa.PayamGostarApiClient</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -45,7 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrmObject\ExtendedProperty\ExtendedPorpertyCreateModel.cs" />
+    <Compile Include="CrmObject\ExtendedProperty\ExtendedPropertyGetResult.cs" />
+    <Compile Include="Employee\EmployeeCreateModel.cs" />
+    <Compile Include="Employee\EmployeeGetResult.cs" />
+    <Compile Include="Employee\EmployeeUpdateModel.cs" />
+    <Compile Include="Form\FormCreateModel.cs" />
+    <Compile Include="Form\FormCreateResult.cs" />
+    <Compile Include="Form\FormDeleteModel.cs" />
+    <Compile Include="Form\FormGetModel.cs" />
+    <Compile Include="Form\FormGetResult.cs" />
+    <Compile Include="Form\FormUpdateModel.cs" />
+    <Compile Include="Form\FormUpdateResult.cs" />
+    <Compile Include="Form\IFormClient.cs" />
+    <Compile Include="Form\PgFormClient.cs" />
     <Compile Include="HttpResponse.cs" />
+    <Compile Include="Identity\IdentityCategoryCreateModel.cs" />
+    <Compile Include="Identity\IdentityCategoryGetResult.cs" />
+    <Compile Include="Identity\IdentityCategoryUpdateModel.cs" />
+    <Compile Include="Identity\IdentityContactAddressCreateModel.cs" />
+    <Compile Include="Identity\IdentityContactAddressGetResult.cs" />
+    <Compile Include="Identity\IdentityContactAddressUpdateModel.cs" />
+    <Compile Include="Identity\IdentityContactPhoneCreateModel.cs" />
+    <Compile Include="Identity\IdentityContactPhoneGetResult.cs" />
+    <Compile Include="Identity\IdentityContactPhoneUpdateModel.cs" />
     <Compile Include="IHttpClient.cs" />
     <Compile Include="Internals\DefaultQueryStringSerializer.cs" />
     <Compile Include="Internals\IQueryStringSerializer.cs" />
@@ -53,6 +76,15 @@
     <Compile Include="InvalidCredentialsException.cs" />
     <Compile Include="IPgClient.cs" />
     <Compile Include="IPgClientFactory.cs" />
+    <Compile Include="Person\IPersonClient.cs" />
+    <Compile Include="Person\PersonCreateModel.cs" />
+    <Compile Include="Person\PersonCreateResult.cs" />
+    <Compile Include="Person\PersonDeleteModel.cs" />
+    <Compile Include="Person\PersonGetModel.cs" />
+    <Compile Include="Person\PersonGetResult.cs" />
+    <Compile Include="Person\PersonUpdateModel.cs" />
+    <Compile Include="Person\PersonUpdateResult.cs" />
+    <Compile Include="Person\PgPersonClient.cs" />
     <Compile Include="PgAuthenticationResult.cs" />
     <Compile Include="PgAuthenticationTicket.cs" />
     <Compile Include="PgClient.cs" />
@@ -89,5 +121,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
