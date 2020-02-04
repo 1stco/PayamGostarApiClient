@@ -1,4 +1,6 @@
 ﻿using PayamGostarClient.TelephonySystem;
+using Septa.PayamGostarApiClient.Form;
+using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
 
 namespace PayamGostarClient
@@ -12,5 +14,9 @@ namespace PayamGostarClient
         ITelephonySystemClient GetTelephonySystem();
 
         ISecurityItemClient GetSecurityItem();
+
+        IFormClient GetFormClient();
+
+        IPersonClient GetPersonClient();
     }
 }

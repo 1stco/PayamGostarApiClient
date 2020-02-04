@@ -1,4 +1,6 @@
 ﻿using PayamGostarClient.TelephonySystem;
+using Septa.PayamGostarApiClient.Form;
+using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
 
 namespace PayamGostarClient
@@ -17,6 +19,16 @@ namespace PayamGostarClient
         public string ServiceUrl { get; set; }
 
         public PgAuthenticationTicket Ticket { get; private set; }
+
+        public IFormClient GetFormClient()
+        {
+            return new PgFormClient(_httpClient, this);
+        }
+
+        public IPersonClient GetPersonClient()
+        {
+            return new PgPersonClient(_httpClient, this);
+        }
 
         public ISecurityItemClient GetSecurityItem()
         {
