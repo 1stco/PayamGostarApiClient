@@ -23,9 +23,17 @@ namespace Septa.PayamGostarApiClient.Person
 
 		}
 
-		public void CallDelete(PersonDeleteModel model)
+		public bool CallDelete(PersonDeleteModel model)
 		{
-			_httpClient.PostJson<PersonDeleteModel, string>(_pgClient.ServiceUrl, $"api/v2/crmobject/person/delete", _pgClient.Ticket, model);
+			try
+			{
+				_httpClient.PostJson<PersonDeleteModel, string>(_pgClient.ServiceUrl, $"api/v2/crmobject/person/delete", _pgClient.Ticket, model);
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
 		}
 
 		public PersonGetResult CallGet(PersonGetModel model)

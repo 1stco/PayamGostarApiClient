@@ -11,6 +11,6 @@ namespace Septa.PayamGostarApiClient.Person
 		PersonGetResult CallGet(PersonGetModel model);
 		PersonCreateResult CallCreate(PersonCreateModel model);
 		PersonUpdateResult CallUpdate(PersonUpdateModel model);
-		void CallDelete(PersonDeleteModel model);
+		bool CallDelete(PersonDeleteModel model);
 	}
 }

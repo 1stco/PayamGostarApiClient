@@ -33,9 +33,17 @@ namespace Septa.PayamGostarApiClient.Form
 			return _httpClient.PostJson<FormUpdateModel, FormUpdateResult>(_pgClient.ServiceUrl, $"api/v2/crmobject/form/update", _pgClient.Ticket, model);
 		}
 
-		public void CallDelete(FormDeleteModel model)
+		public bool CallDelete(FormDeleteModel model)
 		{
-			_httpClient.PostJson<FormDeleteModel, string>(_pgClient.ServiceUrl, $"api/v2/crmobject/form/delete", _pgClient.Ticket, model);
+			try
+			{
+				_httpClient.PostJson<FormDeleteModel, string>(_pgClient.ServiceUrl, $"api/v2/crmobject/form/delete", _pgClient.Ticket, model);
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
 		}
 	}
 }

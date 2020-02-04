@@ -11,7 +11,7 @@ namespace Septa.PayamGostarApiClient.Form
 		FormGetResult CallGet(FormGetModel model);
 		FormCreateResult CallCreate(FormCreateModel model);
 		FormUpdateResult CallUpdate(FormUpdateModel model);
-		void CallDelete(FormDeleteModel model);
+		bool CallDelete(FormDeleteModel model);
 
 	}
 }
