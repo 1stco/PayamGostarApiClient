@@ -8,7 +8,7 @@ namespace Septa.PayamGostarApiClient.Identity
 {
 	public class IdentityContactPhoneUpdateModel
 	{
-		public Guid Id { get; set; }
+		public string Id { get; set; }
 
 		public string PhoneType { get; set; }
 

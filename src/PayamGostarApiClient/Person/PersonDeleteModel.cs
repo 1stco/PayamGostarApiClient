@@ -8,7 +8,7 @@ namespace Septa.PayamGostarApiClient.Person
 {
 	public class PersonDeleteModel
 	{
-		public Guid Id { get; set; }
+		public string Id { get; set; }
 
 		public int Option { get; set; }
 	}

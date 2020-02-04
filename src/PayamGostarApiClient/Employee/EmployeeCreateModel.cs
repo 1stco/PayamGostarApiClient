@@ -8,9 +8,9 @@ namespace Septa.PayamGostarApiClient.Employee
 {
 	public class EmployeeCreateModel
 	{
-        public Guid? OrganizationId { get; set; }
+        public string OrganizationId { get; set; }
 
-        public Guid? PersonId { get; set; }
+        public string PersonId { get; set; }
 
         public string Profession { get; set; }
 

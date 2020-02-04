@@ -8,6 +8,6 @@ namespace Septa.PayamGostarApiClient.Person
 {
 	public class PersonUpdateResult
 	{
-		public Guid CrmId { get; set; }
+		public string CrmId { get; set; }
 	}
 }

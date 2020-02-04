@@ -47,13 +47,13 @@ namespace Septa.PayamGostarApiClient.Person
         public string PreferredContactType { get; set; }
         public string NationalCode { get; set; }
         //
-        public Guid CrmId { get; set; }
+        public string CrmId { get; set; }
         public string CrmObjectTypeCode { get; set; }
-        public Guid? ParentCrmObjectId { get; set; }
+        public string? ParentCrmObjectId { get; set; }
         public List<ExtendedPorpertyCreateModel> ExtendedProperties { get; set; }
         public string[] Tags { get; set; }
         public string RefId { get; set; }
-        public Guid? StageId { get; set; }
+        public string? StageId { get; set; }
         public string Description { get; set; }
         public string Subject { get; set; }
     }

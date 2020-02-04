@@ -8,11 +8,11 @@ namespace Septa.PayamGostarApiClient.Employee
 {
 	public class EmployeeUpdateModel
 	{
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
-        public Guid? OrganizationId { get; set; }
+        public string OrganizationId { get; set; }
 
-        public Guid? PersonId { get; set; }
+        public string PersonId { get; set; }
 
         public string Profession { get; set; }
 

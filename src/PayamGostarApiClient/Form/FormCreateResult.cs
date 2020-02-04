@@ -8,6 +8,6 @@ namespace Septa.PayamGostarApiClient.Form
 {
 	public class FormCreateResult
 	{
-		public Guid CrmId { get; set; }
+		public string CrmId { get; set; }
 	}
 }

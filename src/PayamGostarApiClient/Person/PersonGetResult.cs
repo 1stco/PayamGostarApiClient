@@ -70,7 +70,7 @@ namespace Septa.PayamGostarApiClient.Person
         public string SaleUsername { get; set; }
         public string OtherUsername { get; set; }
         //
-        public Guid CrmId { get; set; }
+        public string CrmId { get; set; }
 
         public string CrmObjectTypeName { get; set; }
 
@@ -78,9 +78,9 @@ namespace Septa.PayamGostarApiClient.Person
 
         public int CrmObjectTypeIndex { get; set; }
 
-        public Guid CrmObjectTypeId { get; set; }
+        public string CrmObjectTypeId { get; set; }
 
-        public Guid? ParentCrmObjectId { get; set; }
+        public string ParentCrmObjectId { get; set; }
 
         public List<ExtendedPropertyGetResult> ExtendedProperties { get; set; }
 
@@ -94,7 +94,7 @@ namespace Septa.PayamGostarApiClient.Person
 
         public string Stage { get; set; }
 
-        public Guid? StageId { get; set; }
+        public string StageId { get; set; }
 
         public int? ProcessLifePathIndex { get; set; }
 

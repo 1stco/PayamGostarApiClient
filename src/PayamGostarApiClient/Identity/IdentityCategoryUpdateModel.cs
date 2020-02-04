@@ -8,8 +8,8 @@ namespace Septa.PayamGostarApiClient.Identity
 {
 	public class IdentityCategoryUpdateModel
 	{
-		public Guid Id { get; set; }
-		public Guid IdentityId { get; set; }
+		public string Id { get; set; }
+		public string IdentityId { get; set; }
 		public string Key { get; set; }
 	}
 }

@@ -9,11 +9,11 @@ namespace Septa.PayamGostarApiClient.Form
 {
 	public class FormUpdateModel
 	{
-        public Guid CrmId { get; set; }
+        public string CrmId { get; set; }
 
         public string CrmObjectTypeCode { get; set; }
 
-        public Guid? ParentCrmObjectId { get; set; }
+        public string ParentCrmObjectId { get; set; }
 
         public List<ExtendedPorpertyCreateModel> ExtendedProperties { get; set; }
 
@@ -21,9 +21,9 @@ namespace Septa.PayamGostarApiClient.Form
 
         public string RefId { get; set; }
 
-        public Guid? StageId { get; set; }
+        public string StageId { get; set; }
 
-        public Guid? IdentityId { get; set; }
+        public string IdentityId { get; set; }
 
         public string Description { get; set; }
 
