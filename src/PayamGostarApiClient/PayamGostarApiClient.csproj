@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrmObject\Constants.cs" />
+    <Compile Include="CrmObject\CrmObjectFindModel.cs" />
+    <Compile Include="CrmObject\CrmObjectFindQueryModel.cs" />
     <Compile Include="CrmObject\ExtendedProperty\ExtendedPorpertyCreateModel.cs" />
     <Compile Include="CrmObject\ExtendedProperty\ExtendedPropertyGetResult.cs" />
     <Compile Include="Employee\EmployeeCreateModel.cs" />
@@ -114,6 +117,18 @@
     <Compile Include="TelephonySystem\TelephonySystemPeerResult.cs" />
     <Compile Include="TelephonySystem\TelephonySystemPeerType.cs" />
     <Compile Include="TelephonySystem\UpdateCallIdentityModel.cs" />
+    <Compile Include="Ticket\ITicketClient.cs" />
+    <Compile Include="Ticket\PgTicketClient.cs" />
+    <Compile Include="Ticket\TicketActiveProcessLifePathGetResult.cs" />
+    <Compile Include="Ticket\TicketCreateCustomerReplyFilePathModel.cs" />
+    <Compile Include="Ticket\TicketCreateCustomerReplyModel.cs" />
+    <Compile Include="Ticket\TicketCreateModel.cs" />
+    <Compile Include="Ticket\TicketCreateResult.cs" />
+    <Compile Include="Ticket\TicketDeleteModel.cs" />
+    <Compile Include="Ticket\TicketGetModel.cs" />
+    <Compile Include="Ticket\TicketGetResult.cs" />
+    <Compile Include="Ticket\TicketUpdateModel.cs" />
+    <Compile Include="Ticket\TicketUpdateResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

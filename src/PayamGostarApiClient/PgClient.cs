@@ -2,6 +2,7 @@
 using Septa.PayamGostarApiClient.Form;
 using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
+using Septa.PayamGostarApiClient.Ticket;
 
 namespace PayamGostarClient
 {
@@ -38,6 +39,11 @@ namespace PayamGostarClient
         public ITelephonySystemClient GetTelephonySystem()
         {
             return new PgTelephonySystemClient(_httpClient, this);
+        }
+
+        public ITicketClient GetTicketClient()
+        {
+            return new PgTicketClient(_httpClient, this);
         }
     }
 }

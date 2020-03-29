@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Septa.PayamGostarApiClient.CrmObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Septa.PayamGostarApiClient.Person
 		PersonCreateResult CallCreate(PersonCreateModel model);
 		PersonUpdateResult CallUpdate(PersonUpdateModel model);
 		bool CallDelete(PersonDeleteModel model);
+		List<PersonGetResult> CallFind(CrmObjectFindModel model);
 	}
 }

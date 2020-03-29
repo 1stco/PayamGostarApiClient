@@ -1,4 +1,5 @@
 ﻿using PayamGostarClient;
+using Septa.PayamGostarApiClient.CrmObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,11 @@ namespace Septa.PayamGostarApiClient.Person
 			{
 				return false;
 			}
+		}
+
+		public List<PersonGetResult> CallFind(CrmObjectFindModel model)
+		{
+			return _httpClient.PostJson<CrmObjectFindModel, List<PersonGetResult>>(_pgClient.ServiceUrl, $"api/v2/crmobject/person/find", _pgClient.Ticket, model);
 		}
 
 		public PersonGetResult CallGet(PersonGetModel model)

@@ -2,6 +2,7 @@
 using Septa.PayamGostarApiClient.Form;
 using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
+using Septa.PayamGostarApiClient.Ticket;
 
 namespace PayamGostarClient
 {
@@ -18,5 +19,7 @@ namespace PayamGostarClient
         IFormClient GetFormClient();
 
         IPersonClient GetPersonClient();
+
+        ITicketClient GetTicketClient();
     }
 }
