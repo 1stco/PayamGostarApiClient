@@ -25,6 +25,8 @@ namespace Septa.PayamGostarApiClient.Form
 
         public string IdentityId { get; set; }
 
+        public string AssignedToUserName { get; set; }
+
         public string Description { get; set; }
 
         public string Subject { get; set; }

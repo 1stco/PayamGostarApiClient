@@ -25,6 +25,8 @@ namespace Septa.PayamGostarApiClient.Ticket
         public string[] Tags { get; set; }
         public string RefId { get; set; }
         public string StageId { get; set; }
+        public string IdentityId { get; set; }
+        public string AssignedToUserName { get; set; }
         public string Description { get; set; }
         public string Subject { get; set; }
     }
