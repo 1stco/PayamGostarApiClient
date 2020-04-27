@@ -47,9 +47,9 @@ namespace Septa.PayamGostarApiClient.Form
 			}
 		}
 
-		public List<FormGetResult> CallFind(CrmObjectFindModel model)
+		public FormFindResult CallFind(CrmObjectFindModel model)
 		{
-			return _httpClient.PostJson<CrmObjectFindModel, List<FormGetResult>>(_pgClient.ServiceUrl, $"api/v2/crmobject/form/find", _pgClient.Ticket, model);
+			return _httpClient.PostJson<CrmObjectFindModel, FormFindResult>(_pgClient.ServiceUrl, $"api/v2/crmobject/form/find", _pgClient.Ticket, model);
 		}
 	}
 }

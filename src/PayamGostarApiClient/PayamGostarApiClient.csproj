@@ -47,7 +47,10 @@
   <ItemGroup>
     <Compile Include="CrmObject\Constants.cs" />
     <Compile Include="CrmObject\CrmObjectFindModel.cs" />
+    <Compile Include="CrmObject\CrmObjectFindOrderModel.cs" />
     <Compile Include="CrmObject\CrmObjectFindQueryModel.cs" />
+    <Compile Include="CrmObject\CrmObjectFindResult.cs" />
+    <Compile Include="CrmObject\CrmObjectFindSelectModel.cs" />
     <Compile Include="CrmObject\ExtendedProperty\ExtendedPorpertyCreateModel.cs" />
     <Compile Include="CrmObject\ExtendedProperty\ExtendedPropertyGetResult.cs" />
     <Compile Include="Employee\EmployeeCreateModel.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="Form\FormCreateModel.cs" />
     <Compile Include="Form\FormCreateResult.cs" />
     <Compile Include="Form\FormDeleteModel.cs" />
+    <Compile Include="Form\FormFindResult.cs" />
     <Compile Include="Form\FormGetModel.cs" />
     <Compile Include="Form\FormGetResult.cs" />
     <Compile Include="Form\FormUpdateModel.cs" />
@@ -83,6 +87,7 @@
     <Compile Include="Person\PersonCreateModel.cs" />
     <Compile Include="Person\PersonCreateResult.cs" />
     <Compile Include="Person\PersonDeleteModel.cs" />
+    <Compile Include="Person\PersonFindResult.cs" />
     <Compile Include="Person\PersonGetModel.cs" />
     <Compile Include="Person\PersonGetResult.cs" />
     <Compile Include="Person\PersonUpdateModel.cs" />
@@ -125,6 +130,7 @@
     <Compile Include="Ticket\TicketCreateModel.cs" />
     <Compile Include="Ticket\TicketCreateResult.cs" />
     <Compile Include="Ticket\TicketDeleteModel.cs" />
+    <Compile Include="Ticket\TicketFindResult.cs" />
     <Compile Include="Ticket\TicketGetModel.cs" />
     <Compile Include="Ticket\TicketGetResult.cs" />
     <Compile Include="Ticket\TicketUpdateModel.cs" />

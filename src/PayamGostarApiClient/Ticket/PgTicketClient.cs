@@ -50,9 +50,9 @@ namespace Septa.PayamGostarApiClient.Ticket
             }
         }
 
-        public List<TicketGetResult> CallFind(CrmObjectFindModel model)
+        public TicketFindResult CallFind(CrmObjectFindModel model)
         {
-            return _httpClient.PostJson<CrmObjectFindModel, List<TicketGetResult>>(_pgClient.ServiceUrl, $"api/v2/crmobject/ticket/find", _pgClient.Ticket, model);
+            return _httpClient.PostJson<CrmObjectFindModel, TicketFindResult>(_pgClient.ServiceUrl, $"api/v2/crmobject/ticket/find", _pgClient.Ticket, model);
         }
 
         public TicketGetResult CallGet(TicketGetModel model)

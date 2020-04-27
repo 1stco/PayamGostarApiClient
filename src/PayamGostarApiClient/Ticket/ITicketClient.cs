@@ -13,7 +13,7 @@ namespace Septa.PayamGostarApiClient.Ticket
         TicketCreateResult CallCreate(TicketCreateModel model);
         TicketUpdateResult CallUpdate(TicketUpdateModel model);
         bool CallDelete(TicketDeleteModel model);
-        List<TicketGetResult> CallFind(CrmObjectFindModel model);
+        TicketFindResult CallFind(CrmObjectFindModel model);
         bool CallCustomerReply(TicketCreateCustomerReplyModel model);
     }
 }

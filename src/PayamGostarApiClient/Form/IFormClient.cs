@@ -13,6 +13,6 @@ namespace Septa.PayamGostarApiClient.Form
 		FormCreateResult CallCreate(FormCreateModel model);
 		FormUpdateResult CallUpdate(FormUpdateModel model);
 		bool CallDelete(FormDeleteModel model);
-		List<FormGetResult> CallFind(CrmObjectFindModel model);
+		FormFindResult CallFind(CrmObjectFindModel model);
 	}
 }

@@ -13,6 +13,6 @@ namespace Septa.PayamGostarApiClient.Person
 		PersonCreateResult CallCreate(PersonCreateModel model);
 		PersonUpdateResult CallUpdate(PersonUpdateModel model);
 		bool CallDelete(PersonDeleteModel model);
-		List<PersonGetResult> CallFind(CrmObjectFindModel model);
+		PersonFindResult CallFind(CrmObjectFindModel model);
 	}
 }
