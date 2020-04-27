@@ -9,6 +9,6 @@ namespace Septa.PayamGostarApiClient.Form
 {
     public class FormFindResult : CrmObjectFindResult
     {
-        public List<FormGetResult> data { get; set; }
+        public List<FormFindGetResult> data { get; set; }
     }
 }

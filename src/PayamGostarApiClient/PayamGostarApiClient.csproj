@@ -59,6 +59,7 @@
     <Compile Include="Form\FormCreateModel.cs" />
     <Compile Include="Form\FormCreateResult.cs" />
     <Compile Include="Form\FormDeleteModel.cs" />
+    <Compile Include="Form\FormFindGetResult.cs" />
     <Compile Include="Form\FormFindResult.cs" />
     <Compile Include="Form\FormGetModel.cs" />
     <Compile Include="Form\FormGetResult.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Person\PersonCreateModel.cs" />
     <Compile Include="Person\PersonCreateResult.cs" />
     <Compile Include="Person\PersonDeleteModel.cs" />
+    <Compile Include="Person\PersonFindGetResult.cs" />
     <Compile Include="Person\PersonFindResult.cs" />
     <Compile Include="Person\PersonGetModel.cs" />
     <Compile Include="Person\PersonGetResult.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Ticket\TicketCreateModel.cs" />
     <Compile Include="Ticket\TicketCreateResult.cs" />
     <Compile Include="Ticket\TicketDeleteModel.cs" />
+    <Compile Include="Ticket\TicketFindGetResult.cs" />
     <Compile Include="Ticket\TicketFindResult.cs" />
     <Compile Include="Ticket\TicketGetModel.cs" />
     <Compile Include="Ticket\TicketGetResult.cs" />

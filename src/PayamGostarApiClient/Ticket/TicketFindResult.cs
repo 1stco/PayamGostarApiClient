@@ -9,6 +9,6 @@ namespace Septa.PayamGostarApiClient.Ticket
 {
     public class TicketFindResult : CrmObjectFindResult
     {
-        public List<TicketGetResult> data { get; set; }
+        public List<TicketFindGetResult> data { get; set; }
     }
 }

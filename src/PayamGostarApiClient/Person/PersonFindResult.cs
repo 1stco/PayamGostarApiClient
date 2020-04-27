@@ -9,6 +9,6 @@ namespace Septa.PayamGostarApiClient.Person
 {
     public class PersonFindResult : CrmObjectFindResult
     {
-        public List<PersonGetResult> data { get; set; }
+        public List<PersonFindGetResult> data { get; set; }
     }
 }
