@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillableObject\BillableObjectChangeStateModel.cs" />
     <Compile Include="CrmObject\Constants.cs" />
     <Compile Include="CrmObject\CrmObjectFindModel.cs" />
     <Compile Include="CrmObject\CrmObjectFindOrderModel.cs" />
@@ -82,6 +83,21 @@
     <Compile Include="Internals\IQueryStringSerializer.cs" />
     <Compile Include="Internals\NewtonsoftJsonSerializer.cs" />
     <Compile Include="InvalidCredentialsException.cs" />
+    <Compile Include="Invoice\InvoiceCreateModel.cs" />
+    <Compile Include="Invoice\InvoiceCreateResult.cs" />
+    <Compile Include="Invoice\InvoiceDeleteModel.cs" />
+    <Compile Include="Invoice\InvoiceDetailModel.cs" />
+    <Compile Include="Invoice\InvoiceFindResult.cs" />
+    <Compile Include="Invoice\InvoiceGetResult.cs" />
+    <Compile Include="Invoice\InvoiceDetailGetResult.cs" />
+    <Compile Include="Invoice\InvoiceFindGetResult.cs" />
+    <Compile Include="Invoice\InvoiceGetModel.cs" />
+    <Compile Include="Invoice\InvoiceUpdateModel.cs" />
+    <Compile Include="Invoice\InvoiceUpdateResult.cs" />
+    <Compile Include="Invoice\SalesInvoice\ISalesInvoiceClient.cs" />
+    <Compile Include="Invoice\SalesInvoice\PgSalesInvoiceClient.cs" />
+    <Compile Include="Invoice\SalesInvoice\SalesInvoiceCreateModel.cs" />
+    <Compile Include="Invoice\SalesInvoice\SalesInvoiceUpdateModel.cs" />
     <Compile Include="IPgClient.cs" />
     <Compile Include="IPgClientFactory.cs" />
     <Compile Include="Person\IPersonClient.cs" />
