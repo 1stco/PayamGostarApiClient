@@ -1,5 +1,6 @@
 ﻿using PayamGostarClient.TelephonySystem;
 using Septa.PayamGostarApiClient.Form;
+using Septa.PayamGostarApiClient.Invoice.PurchaseInvoice;
 using Septa.PayamGostarApiClient.Invoice.SalesInvoice;
 using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
@@ -35,6 +36,11 @@ namespace PayamGostarClient
         public ISalesInvoiceClient GetSalesInvoiceClient()
         {
             return new PgSalesInvoiceClient(_httpClient, this);
+        }
+
+        public IPurchaseInvoiceClient GetPurchaseInvoiceClient()
+        {
+            return new PgPurchaseInvoiceClient(_httpClient, this);
         }
 
         public ISecurityItemClient GetSecurityItem()

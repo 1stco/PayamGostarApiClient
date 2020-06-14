@@ -94,6 +94,10 @@
     <Compile Include="Invoice\InvoiceGetModel.cs" />
     <Compile Include="Invoice\InvoiceUpdateModel.cs" />
     <Compile Include="Invoice\InvoiceUpdateResult.cs" />
+    <Compile Include="Invoice\PurchaseInvoice\IPurchaseInvoiceClient.cs" />
+    <Compile Include="Invoice\PurchaseInvoice\PgPurchaseInvoiceClient.cs" />
+    <Compile Include="Invoice\PurchaseInvoice\PurchaseInvoiceCreateModel.cs" />
+    <Compile Include="Invoice\PurchaseInvoice\PurchaseInvoiceUpdateModel.cs" />
     <Compile Include="Invoice\SalesInvoice\ISalesInvoiceClient.cs" />
     <Compile Include="Invoice\SalesInvoice\PgSalesInvoiceClient.cs" />
     <Compile Include="Invoice\SalesInvoice\SalesInvoiceCreateModel.cs" />
