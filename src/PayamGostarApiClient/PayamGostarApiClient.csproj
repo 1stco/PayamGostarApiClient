@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillableObject\BillableObjectChangeStateModel.cs" />
+    <Compile Include="Common\SelectListItemModel.cs" />
     <Compile Include="CrmObject\Constants.cs" />
     <Compile Include="CrmObject\CrmObjectFindModel.cs" />
     <Compile Include="CrmObject\CrmObjectFindOrderModel.cs" />
@@ -104,6 +105,17 @@
     <Compile Include="Invoice\SalesInvoice\SalesInvoiceUpdateModel.cs" />
     <Compile Include="IPgClient.cs" />
     <Compile Include="IPgClientFactory.cs" />
+    <Compile Include="Organization\IOrganizationClient.cs" />
+    <Compile Include="Organization\OrganizationCreateModel.cs" />
+    <Compile Include="Organization\OrganizationCreateResult.cs" />
+    <Compile Include="Organization\OrganizationDeleteModel.cs" />
+    <Compile Include="Organization\OrganizationFindGetResult.cs" />
+    <Compile Include="Organization\OrganizationFindResult.cs" />
+    <Compile Include="Organization\OrganizationGetModel.cs" />
+    <Compile Include="Organization\OrganizationGetResult.cs" />
+    <Compile Include="Organization\OrganizationUpdateModel.cs" />
+    <Compile Include="Organization\OrganizationUpdateResult.cs" />
+    <Compile Include="Organization\PgOrganizationClient.cs" />
     <Compile Include="Person\IPersonClient.cs" />
     <Compile Include="Person\PersonCreateModel.cs" />
     <Compile Include="Person\PersonCreateResult.cs" />
@@ -123,6 +135,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internals\RestSharpHttpClient.cs" />
     <Compile Include="SecurityItem\ISecurityItemClient.cs" />
+    <Compile Include="Task\TaskCreateModel.cs" />
+    <Compile Include="Task\TaskCreateResult.cs" />
+    <Compile Include="Task\TaskDeleteModel.cs" />
+    <Compile Include="Task\TaskFindGetResult.cs" />
+    <Compile Include="Task\TaskFindResult.cs" />
+    <Compile Include="Task\TaskGetModel.cs" />
+    <Compile Include="Task\TaskGetResult.cs" />
+    <Compile Include="Task\TaskUpdateModel.cs" />
+    <Compile Include="Task\TaskUpdateResult.cs" />
+    <Compile Include="Task\ITaskClient.cs" />
+    <Compile Include="Task\PgTaskClient.cs" />
     <Compile Include="TelephonySystem\ActiveCallFilterModel.cs" />
     <Compile Include="TelephonySystem\ActiveCallResult.cs" />
     <Compile Include="TelephonySystem\CallChannelCreateModel.cs" />
@@ -155,6 +178,7 @@
     <Compile Include="Ticket\TicketFindGetResult.cs" />
     <Compile Include="Ticket\TicketFindResult.cs" />
     <Compile Include="Ticket\TicketGetModel.cs" />
+    <Compile Include="Ticket\TicketGetReplyFileModel.cs" />
     <Compile Include="Ticket\TicketGetResult.cs" />
     <Compile Include="Ticket\TicketUpdateModel.cs" />
     <Compile Include="Ticket\TicketUpdateResult.cs" />

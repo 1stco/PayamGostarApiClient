@@ -1,4 +1,5 @@
-﻿using Septa.PayamGostarApiClient.CrmObject;
+﻿using Septa.PayamGostarApiClient.Common;
+using Septa.PayamGostarApiClient.CrmObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace Septa.PayamGostarApiClient.Ticket
         bool CallDelete(TicketDeleteModel model);
         TicketFindResult CallFind(CrmObjectFindModel model);
         bool CallCustomerReply(TicketCreateCustomerReplyModel model);
+        List<SelectListItemModel> CallGetTicketTypes();
+        byte[] CallGetReplyFileByName(TicketGetReplyFileModel model);
     }
 }

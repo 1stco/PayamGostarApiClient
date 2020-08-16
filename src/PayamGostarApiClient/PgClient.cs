@@ -2,8 +2,10 @@
 using Septa.PayamGostarApiClient.Form;
 using Septa.PayamGostarApiClient.Invoice.PurchaseInvoice;
 using Septa.PayamGostarApiClient.Invoice.SalesInvoice;
+using Septa.PayamGostarApiClient.Organization;
 using Septa.PayamGostarApiClient.Person;
 using Septa.PayamGostarApiClient.SecurityItem;
+using Septa.PayamGostarApiClient.Task;
 using Septa.PayamGostarApiClient.Ticket;
 
 namespace PayamGostarClient
@@ -56,6 +58,16 @@ namespace PayamGostarClient
         public ITicketClient GetTicketClient()
         {
             return new PgTicketClient(_httpClient, this);
+        }
+
+        public IOrganizationClient GetOrganizationClient()
+        {
+            return new PgOrganizationClient(_httpClient, this);
+        }
+
+        public ITaskClient GetTaskClient()
+        {
+            return new PgTaskClient(_httpClient, this);
         }
     }
 }

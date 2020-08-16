@@ -1,4 +1,5 @@
 ﻿using PayamGostarClient;
+using Septa.PayamGostarApiClient.Common;
 using Septa.PayamGostarApiClient.CrmObject;
 using System;
 using System.Collections.Generic;
@@ -64,5 +65,23 @@ namespace Septa.PayamGostarApiClient.Ticket
         {
             return _httpClient.PostJson<TicketUpdateModel, TicketUpdateResult>(_pgClient.ServiceUrl, $"api/v2/crmobject/ticket/update", _pgClient.Ticket, model);
         }
+
+        public List<SelectListItemModel> CallGetTicketTypes()
+        {
+            return _httpClient.PostJson<List<SelectListItemModel>>(_pgClient.ServiceUrl, $"api/v2/crmobject/ticket/gettickettypes", _pgClient.Ticket);
+        }
+
+        public byte[] CallGetReplyFileByName(TicketGetReplyFileModel model)
+        {
+            var queryparams = new Dictionary<string, string>()
+            {
+                { "TicketId", model.TicketId },
+                { "ReplyId", model.ReplyId },
+                { "FileId", model.FileId }
+            };
+
+            return _httpClient.DownloadFile(_pgClient.ServiceUrl, $"api/v2/crmobject/ticket/getreplyfile", _pgClient.Ticket, queryparams);
+        }
+
     }
 }

@@ -24,6 +24,8 @@ namespace PayamGostarClient
         HttpStatusCode PostJson<TRequest>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
             where TRequest : class;
 
+        TResponse PostJson<TResponse>(string serviceUrl, string path, PgAuthenticationTicket ticket)
+            where TResponse : class;
 
         TResponse PutJson<TRequest, TResponse>(string serviceUrl, string path, PgAuthenticationTicket ticket, TRequest model)
             where TRequest : class
@@ -36,5 +38,7 @@ namespace PayamGostarClient
 
 
         bool Test(string serviceUrl, string path, PgAuthenticationTicket ticket);
+
+        byte[] DownloadFile(string serviceUrl, string path, PgAuthenticationTicket ticket, Dictionary<string, string> model);
     }
 }
